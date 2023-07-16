@@ -1,0 +1,58 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-left: 215px;
+    // margin-right: 215px;
+    &.head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+}
+
+.features-list,
+.presentation-list,
+.team-list {
+    gap: 30px;
+}
+
+.container.features,
+.container.head,
+.hero,
+.features,
+.container.presentation,
+.clients.container,
+.foot-container,
+.container.portfolio {
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+}
+
+.foot-container {
+    background-color: var(--bcg-footer);
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        padding-top: 60px;
+    }
+}
+
+.container.presentation {
+    @media screen and (min-width: 320px) and (max-width: 1599px) {
+        display: none;
+    }
+}
+
+// .site-nav .list,
+// .features .list,
+// .presentation-list,
+// .presentation-text,
+// .team-section .list,
+// .foot-container {
+//     display: flex;
+// }

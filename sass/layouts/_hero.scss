@@ -1,0 +1,54 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #2F303A;
+    padding: 200px 0px;
+    background-image: 
+        var(--hero-gradient),
+        url(../img/mobile/Hero-img-mobile-x1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    max-width: 480px;
+    max-height: 400px;
+    width: 100%;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: 
+            var(--hero-gradient),
+            url(../img/mobile/Hero-img-mobile-x2.jpg);
+            margin-top: 60px;
+        }
+    &-title {
+        max-width: 360px;
+        color: var(--primary-bcg-color);
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.6;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.button {
+    color: var(--primary-bcg-color);
+    background-color: var(--accent-color);
+    width: 200px;
+    height: 50px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    margin-top: 30px;
+}
