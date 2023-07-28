@@ -33,6 +33,12 @@ address {
     }
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .contact-list-phone {
+        margin-top: 8px;
+    }
+}
+
 .contacts .link {
     font-weight: 400;
     font-size: 14px;

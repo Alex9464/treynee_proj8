@@ -49,7 +49,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (min-width: 480px) {
+@inc {
   .container {
     width: 480px;
   }
@@ -69,10 +69,11 @@ body {
 .clients.container,
 .foot-container,
 .container.portfolio {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .container.features,
   .container.head,
   .hero,
@@ -384,6 +385,7 @@ header {
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .logo {
     margin-left: 15px;
+    margin-right: 0;
   }
 }
 
@@ -405,6 +407,14 @@ header {
     right: 15px;
     border: 0;
     background-color: transparent;
+  }
+  .mob-menu-open:hover,
+  .mob-menu-open:focus,
+  .mob-menu-open:active,
+  .mob-menu-close:hover,
+  .mob-menu-close:focus,
+  .mob-menu-close:active {
+    fill: var(--accent-color);
   }
   .mob-menu {
     position: fixed;
@@ -584,6 +594,26 @@ header {
     margin-top: 60px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .hero {
+    background-image: var(--hero-gradient), url(../../img/tablet/Hero-img-tablet-x1.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1599px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1599px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1599px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../../img/tablet/Hero-img-tablet-x2.jpg);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .hero {
+    background-image: var(--hero-gradient), url(../../img/desctop/Hero-Img-desctop-x1.jpg);
+  }
+}
+@media screen and (min-width: 1600px) and (min-device-pixel-ratio: 2), screen and (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1600px) and (min-resolution: 192dpi), screen and (min-width: 1600px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../../img/desctop/Hero-Img-desctop-x2.jpg);
+  }
+}
 .hero-title {
   max-width: 360px;
   color: var(--primary-bcg-color);
@@ -623,12 +653,6 @@ header {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .features-list {
-    padding-left: 15px;
-  }
-}
-
 .features-title {
   font-weight: 700;
   font-size: 14px;
@@ -646,16 +670,28 @@ header {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 480px) {
+  .features-text {
+    max-width: 450px;
+    margin-left: 15px;
+  }
+}
 
 .features-icon {
-  width: calc(100% - 30px);
-  width: 450px;
+  width: 100%;
   height: 120px;
   background-color: var(--secondary-bcg-color);
   justify-content: center;
   align-items: center;
   display: flex;
   margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .features-icon {
+    width: 450px;
+  }
 }
 
 .presentation-title,
@@ -703,7 +739,7 @@ header {
   padding-bottom: 60px;
 }
 
-.team-section .container {
+.team-section {
   margin-left: auto;
   margin-right: auto;
 }
@@ -733,6 +769,9 @@ header {
 }
 @media screen and (min-width: 480px) and (max-width: 1599px) {
   .team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -860,6 +899,11 @@ address .link {
   }
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .contact-list-phone {
+    margin-top: 8px;
+  }
+}
 .contacts .link {
   font-weight: 400;
   font-size: 14px;
@@ -990,10 +1034,6 @@ address .link {
   margin-bottom: 94px;
 }
 
-.filter li + li {
-  margin-left: 8px;
-}
-
 .filter .button {
   font-weight: 500;
   font-size: 16px;
@@ -1018,7 +1058,24 @@ address .link {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .list.filter {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 120px;
+    padding-right: 100px;
+    gap: 8px;
+    margin-left: 15px;
+  }
+}
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .filter-btn {
+    width: inherit;
+    padding: 6px 22px 6px 22px;
+    margin-right: 8px;
+  }
+}
 .portfolio .link {
   text-decoration: none;
 }
@@ -1027,6 +1084,11 @@ address .link {
   width: 370px;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .pcontent {
+    width: 450px;
+  }
 }
 
 .portfolio h2 {
@@ -1051,6 +1113,12 @@ address .link {
 }
 .portfolio-list li:hover, .portfolio-list li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-item {

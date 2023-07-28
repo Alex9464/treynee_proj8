@@ -5,11 +5,15 @@ header {
     right: 0;
     background-color: var(--primary-bcg-color);
     z-index: 9;
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include mobile {
         width: 480px;
         height: 60px;
         margin-left: auto;
         margin-right: auto;
+    @include tablet {
+        width: 768px;
+        height: 80px;
+    }
     }
 }
 
@@ -29,12 +33,13 @@ header {
     span {
         color: var(--accent-color);
     }
-    @media screen and (min-width:480px) and (max-width: 767px) {
+    @include mobile {
         margin-left: 15px;
+        margin-right: 0;
     }
 }
 
-@media screen and (min-width:480px) and (max-width: 767px) {
+@include mobile {
     .mob-menu-open {
         position: absolute;
         top: 0;
@@ -52,6 +57,14 @@ header {
         right: 15px;
         border: 0;
         background-color: transparent;
+    }
+    .mob-menu-open:hover,
+    .mob-menu-open:focus,
+    .mob-menu-open:active,
+    .mob-menu-close:hover,
+    .mob-menu-close:focus,
+    .mob-menu-close:active {
+        fill: var(--accent-color);
     }
     .mob-menu {
         position: fixed;
@@ -132,7 +145,7 @@ header {
 }
 
 .site-nav {
-    display: none;
+    display: flex;
     height: 48px;
     margin-top: 32px;
     li + li {
@@ -159,7 +172,7 @@ header {
 }
 
 .auth-nav {
-    display: none;
+    display: flex;
     margin-left: auto;
     align-items: center;
     li + li {
