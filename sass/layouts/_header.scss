@@ -1,20 +1,17 @@
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: var(--primary-bcg-color);
     z-index: 9;
-    @include mobile {
-        width: 480px;
-        height: 60px;
-        margin-left: auto;
-        margin-right: auto;
-    @include tablet {
-        width: 768px;
-        height: 80px;
-    }
-    }
+}
+
+.container-header{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -25,127 +22,15 @@ header {
     letter-spacing: 0.03em;
     color: var(--color-logo);
     text-decoration: none;
-    margin-top: 16px;
-    margin-bottom: 16px;
     &.link {
         margin-right: 93px;
     }
     span {
         color: var(--accent-color);
     }
-    @include mobile {
-        margin-left: 15px;
-        margin-right: 0;
-    }
-}
-
-@include mobile {
-    .mob-menu-open {
-        position: absolute;
-        top: 0;
-        right: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-        background-color: transparent;
-        display: flex;
-        margin-left: auto;
-    }
-    .mob-menu-close {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        border: 0;
-        background-color: transparent;
-    }
-    .mob-menu-open:hover,
-    .mob-menu-open:focus,
-    .mob-menu-open:active,
-    .mob-menu-close:hover,
-    .mob-menu-close:focus,
-    .mob-menu-close:active {
-        fill: var(--accent-color);
-    }
-    .mob-menu {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow: auto;
-        top: 0;
-        background-color: var(--primary-bcg-color);
-        width: 100vw;
-        height: 100vh;
-        padding: 48px 10px 48px 40px;
-    }
-    .mob-link {
-        text-decoration: none;
-        color: var(--title-text-color);
-    }
-    .link-modal-mob {
-        color: var(--primary-text-color);
-    }
-    .mob-link:hover,
-    .mob-link:focus,
-    .mob-link:active,
-    .link-modal-mob:hover,
-    .link-modal-mob:focus,
-    .link-modal-mob:active {
-        color: var(--accent-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
-    }
-    .mob-soc-list:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 22px;
-        margin-left: 10px;
-        align-items: center;
-        color: var(--title-text-color);
-        background: rgba(33, 33, 33, 0.20);
-    }
-    .nav-mob-item,
-    .auth-nav-item {
-        list-style: none;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: 0.8px;
-        &:not(:last-child) {
-            margin-bottom: 32px;
-        }
-    }
-    .nav-mob-item {
-        font-size: 40px;
-        line-height: normal;
-        letter-spacing: 0.8px;
-    }
-    .tel-mob {
-        font-size: 34px;
-        line-height: normal;
-        letter-spacing: 0.68px;
-    }
-    .mail-mob {
-        font-size: 24px;
-        line-height: normal;
-        letter-spacing: 0.48px;
-    }
-    .auth-nav-mobile {
-        margin-top: 50px;
-        margin-bottom: 64px;
-    }
-    .mob-soc {
-        display: flex;
-        gap: 20px;
-    }
-    .social-link-mob {
-        width: 100%;
-    }
 }
 
 .site-nav {
-    display: flex;
     height: 48px;
     margin-top: 32px;
     li + li {
@@ -173,7 +58,7 @@ header {
 
 .auth-nav {
     display: flex;
-    margin-left: auto;
+    margin-right: 215px;
     align-items: center;
     li + li {
         margin-left: 50px;

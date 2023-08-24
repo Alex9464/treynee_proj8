@@ -6,9 +6,6 @@
     width: 370px;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
-    @include mobile {
-        width: 450px;
-    }
 }
 
 .portfolio h2 {
@@ -37,12 +34,6 @@
         0px 4px 4px rgba(0, 0, 0, 0.06), 
         1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-}
-
-.portfolio-list {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .portfolio-item {

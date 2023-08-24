@@ -5,9 +5,9 @@
     margin-bottom: 94px;
 }
 
-// .filter li + li {
-//     margin-left: 8px;
-// }
+.filter li + li {
+    margin-left: 8px;
+}
 
 .filter .button {
     font-weight: 500;
@@ -39,20 +39,4 @@
     margin: 94px 0 34px;
     display: flex;
     justify-content: center;
-    @include mobile {
-        flex-wrap: wrap;
-        justify-content: start;
-        margin-top: 120px;
-        padding-right: 100px;
-        gap: 8px;
-        margin-left: 15px;
-    }
-}
-
-@include mobile {
-    .filter-btn {
-        width: inherit;
-        padding: 6px 22px 6px 22px;
-        margin-right: 8px;
-    }
 }

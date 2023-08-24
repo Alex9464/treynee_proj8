@@ -1,68 +1,26 @@
 .container {
-    width: 100%;
+    padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
-    // margin-left: 215px;
-    // margin-right: 215px;
-    &.head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
-    @include mobile {
+    @media screen and (min-width: 480px) {
         width: 480px;
     }
-    @include tablet {
+    @media screen and (min-width: 768px) {
         width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
     }
 }
 
-.features-list,
-.presentation-list,
-.team-list {
-    gap: 30px;
-}
 
-.container.features,
-.container.head,
-.hero,
-.features,
-.container.presentation,
-.clients.container,
 .foot-container,
 .container.portfolio {
-    // padding-left: 15px;
-    // padding-right: 15px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    @include mobile {
-        width: 480px;
-    }
-    @include tablet {
-        width: 768px;
-    }
-}
-
-.foot-container {
-    background-color: var(--bcg-footer);
-    @include mobile {
-        padding-top: 60px;
-    }
-}
-
-.container.presentation {
-    @media screen and (min-width: 320px) and (max-width: 1599px) {
-        display: none;
-    }
 }
 
 .site-nav .list,
-.features .list,
-.presentation-list,
-.presentation-text,
-.team-section .list,
-.foot-container {
+.presentation-text {
     display: flex;
 }

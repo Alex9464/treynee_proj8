@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>treynee_proj</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,16 +11,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <header>
-        <div class="container head">
-            <a class="link logo" href="./index.html"><span>Web</span>Studio</a>
+    <header class="header">
+        <!-- navigation -->
+        <div class="container-header container">
+            <a class="link logo" href=""><span>Web</span>Studio</a>
             <nav class="site-nav">
                 <ul class="list">
-                    <li><a class="link current" href="./index.html">Студія</a></li>
+                    <li><a class="link current" href="">Студія</a></li>
                     <li><a class="link" href="./portfolio.html">Портфоліо</a></li>
                     <li><a class="link" href="">Контакти</a></li>
                 </ul>
@@ -48,7 +48,8 @@
                 <use href="./img/sprites.svg#icon-menu_burger"></use>
             </svg>
         </button>
-        <div class="mob-menu-container is-hidden" data-menu>
+        <!-- mobile-menu -->
+        <!-- <div class="mob-menu-container is-hidden" data-menu>
             <div class="mob-menu">
                 <button class="mob-menu-close" type="button" data-close-menu>
                     <svg width="40" height="40">
@@ -85,20 +86,22 @@
                     </ul>
                 </div>  
             </div>
-        </div>
+        </div> -->
     </header>
     <main>
+        <!-- hero -->
         <section class="hero">
-            <div class="">
-                <h1 class="hero-title">ЕФЕКТИВНI РIШЕННЯ ДЛЯ ВАШОГО БIЗНЕСУ</h1>
+            <div class="container">
+                <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
                 <button data-open-modal class="button" type="button">Замовити послугу</button>
             </div>
         </section>
-        <section>
-            <div class="container features">
+        <!-- features -->
+        <section class="features">
+            <div class="container">
                 <h2 class="visually-hiden">Особливості</h2>
                 <ul class="features-list list">
-                    <li>
+                    <li class="features_item">
                         <div class="features-icon">
                             <svg width="70" height="70">
                                 <use href="./img/sprites.svg#icon-antena"></use>
@@ -107,7 +110,7 @@
                         <h3 class="features-title">УВАГА ДО ДЕТАЛЕЙ</h3>
                         <p class="features-text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
                     </li>
-                    <li>
+                    <li class="features_item">
                         <div class="features-icon">
                             <svg width="70" height="70">
                                 <use class="" href="./img/sprites.svg#icon-clock"></use>
@@ -116,7 +119,7 @@
                         <h3 class="features-title">ПУНКТУАЛЬНІСТЬ</h3>
                         <p class="features-text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
                     </li>
-                    <li>
+                    <li class="features_item">
                         <div class="features-icon">
                             <svg width="70" height="70">
                                 <use class="" href="./img/sprites.svg#icon-diagram"></use>
@@ -125,7 +128,7 @@
                         <h3 class="features-title">ПЛАНУВАННЯ</h3>
                         <p class="features-text">Так само консультація з широким активом значною мірою зумовлює.</p>
                     </li>
-                    <li>
+                    <li class="features_item">
                         <div class="features-icon">
                             <svg width="70" height="70">
                                 <use class="" href="./img/sprites.svg#icon-astronaut"></use>
@@ -137,31 +140,54 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <!-- presentation / what we do -->
+        <section class="section_presentation">
             <div class="container presentation">
                 <h2 class="presentation-title">Чим ми займаємося</h2>
                 <ul class="presentation-list list">
                     <li>
                         <div class="presentation-thumb">
-                            <img src="img/box1.jpg" alt="typin text" width="370">
+                            <picture>
+                                <source
+                                    srcset="./img/desctop/wwd-1-desctop-x1.jpg 1x,
+                                            ./img/desctop/wwd-1-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                <img src="./img/desctop/wwd-1-desctop-x1.jpg" alt="typin text" width="370"/>
+                            </picture>
                             <p class="presentation-text">Десктопні додатки</p>
                         </div> 
                     </li>
                     <li>
                         <div class="presentation-thumb">
-                            <img src="img/box2.jpg" alt="phone and laptop" width="370">
+                            <picture>
+                                <source
+                                    srcset="./img/desctop/wwd-2-desctop-x1.jpg 1x,
+                                            ./img/desctop/wwd-2-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                <img src="./img/desctop/wwd-2-desctop-x1.jpg" alt="phone and laptop" width="370"/>
+                            </picture>
                             <p class="presentation-text">Мобільні додатки</p>
                         </div>
                     </li>
                     <li>
                         <div class="presentation-thumb">
-                            <img src="img/box3.jpg" alt="tablet" width="370">
+                            <picture>
+                                <source
+                                    srcset="./img/desctop/wwd-3-desctop-x1.jpg 1x,
+                                            ./img/desctop/wwd-3-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                <img src="./img/desctop/wwd-3-desctop-x1.jpg" alt="tablet" width="370"/>
+                            </picture>
                             <p class="presentation-text">Дизайнерські рішення</p>
                         </div>
                     </li>
                   </ul>
             </div>
         </section>
+        <!-- team -->
         <section class="team-section">
             <div class="container">
                 <h2 class="team">Наша команда</h2>
@@ -169,23 +195,21 @@
                     <li class="team-item">
                         <picture>
                             <source
-                                srcset="../img/mobile/img-team-1-mobile-x1.jpg 1x,
-                                ../img/mobile/img-team-1-mobile-x2.jpg 2x"
-                                media="(max-width: 767px)"
+                                srcset="./img/desctop/team-1-desctop-x1.jpg 1x,
+                                        ./img/desctop/team-1-desctop-x2.jpg 2x"
+                                media="(min-width: 1200px)"
                             />
                             <source
-                                srcset=""
+                                srcset="./img/tablet/team-1-tablet-x1.jpg 1x,
+                                        ./img/tablet/team-1-tablet-x2.jpg 2x"
                                 media="(min-width: 768px)"
                             />
                             <source
-                                srcset=""
-                                media="(min-width: 1200px)"
+                                srcset="./img/mobile/team-1-mobile-x1.jpg 1x,
+                                        ./img/mobile/team-1-mobile-x2.jpg 2x"
+                                media="(max-width: 767px)"
                             />
-                            <img
-                                src="../img/mobile/img-team-1-mobile-x1.jpg"
-                                alt="Igor Demyanenko" 
-                                width="450"
-                            />
+                            <img src="./img/team-1.jpg" alt="Igor Demyanenko" width="450"/>
                         </picture>
                         <div class="container-team">
                             <h3 class="team-title">Ігор Дем'яненко</h3>
@@ -225,23 +249,21 @@
                     <li class="team-item">
                         <picture>
                             <source
-                                srcset="../img/mobile/img-team-2-mobile-x1.jpg 1x,
-                                        ../img/mobile/img-team-2-mobile-x2.jpg 2x"
-                                media="(max-width: 767px)"
+                                srcset="./img/desctop/team-2-desctop-x1.jpg 1x,
+                                        ./img/desctop/team-2-desctop-x2.jpg 2x"
+                                media="(min-width: 1200px)"
                             />
                             <source
-                                srcset=""
+                                srcset="./img/tablet/team-2-tablet-x1.jpg 1x,
+                                        ./img/tablet/team-2-tablet-x2.jpg 2x"
                                 media="(min-width: 768px)"
                             />
                             <source
-                                srcset=""
-                                media="(min-width: 1200px)"
+                                srcset="./img/mobile/team-2-mobile-x1.jpg 1x,
+                                        ./img/mobile/team-2-mobile-x2.jpg 2x"
+                                media="(max-width: 767px)"
                             />
-                            <img
-                                src="../img/mobile/img-team-2-mobile-x1.jpg"
-                                alt="Olga Repina" 
-                                width="450"
-                            />
+                            <img src="./img/team-2.jpg" alt="Olga Repina" width="450"/>
                         </picture>
                         <div class="container-team">
                             <h3 class="team-title">Ольга Рєпіна</h3>
@@ -281,23 +303,21 @@
                     <li class="team-item">
                         <picture>
                             <source
-                                srcset="../img/mobile/img-team-3-mobile-x1.jpg 1x,
-                                        ../img/mobile/img-team-3-mobile-x2.jpg 2x"
-                                media="(max-width: 767px)"
+                                srcset="./img/desctop/team-3-desctop-x1.jpg 1x,
+                                        ./img/desctop/team-3-desctop-x2.jpg 2x"
+                                media="(min-width: 1200px)"
                             />
                             <source
-                                srcset=""
+                                srcset="./img/tablet/team-3-tablet-x1.jpg 1x,
+                                        ./img/tablet/team-3-tablet-x2.jpg 2x"
                                 media="(min-width: 768px)"
                             />
                             <source
-                                srcset=""
-                                media="(min-width: 1200px)"
+                                srcset="./img/mobile/team-3-mobile-x1.jpg 1x,
+                                        ./img/mobile/team-3-mobile-x2.jpg 2x"
+                                media="(max-width: 767px)"
                             />
-                            <img
-                                src="../img/mobile/img-team-3-mobile-x1.jpg"
-                                alt="Mykola Tarasov" 
-                                width="450"
-                            />
+                            <img src="./img/team-3.jpg" alt="Mykola Tarasov" width="450"/>
                         </picture>
                         <div class="container-team">
                             <h3 class="team-title">Микола Тарасов</h3>
@@ -337,23 +357,21 @@
                     <li class="team-item">
                         <picture>
                             <source
-                                srcset="../img/mobile/img-team-4-mobile-x1.jpg 1x,
-                                        ../img/mobile/img-team-4-mobile-x2.jpg 2x"
-                                media="(max-width: 767px)"
+                                srcset="./img/desctop/team-4-desctop-x1.jpg 1x,
+                                        ./img/desctop/team-4-desctop-x2.jpg 2x"
+                                media="(min-width: 1200px)"
                             />
                             <source
-                                srcset=""
+                                srcset="./img/tablet/team-4-tablet-x1.jpg 1x,
+                                        ./img/tablet/team-4-tablet-x2.jpg 2x"
                                 media="(min-width: 768px)"
                             />
                             <source
-                                srcset=""
-                                media="(min-width: 1200px)"
+                                srcset="./img/mobile/team-4-mobile-x1.jpg 1x,
+                                        ./img/mobile/team-4-mobile-x2.jpg 2x"
+                                media="(max-width: 767px)"
                             />
-                            <img
-                                src="../img/mobile/img-team-4-mobile-x1.jpg"
-                                alt="Mykhajlo Jrmakhov" 
-                                width="450"
-                            />
+                            <img src="./img/team-4.jpg" alt="Mykhajlo Jrmakhov" width="450"/>
                         </picture>
                         <div class="container-team">
                             <h3 class="team-title">Михайло Єрмаков</h3>
@@ -393,7 +411,8 @@
                 </ul>
             </div>
         </section>
-        <section class="container">
+        <!-- clients -->
+        <section class="clients container">
             <h2 class="clients-title" >Постійні клієнти</h2>
             <ul class="list list-clients">
                 <li>
@@ -441,7 +460,8 @@
             </ul>
         </section>
     </main>
-    <footer>
+    <!-- footer -->
+    <footer class="footer-section">
         <div class="foot-container container">
             <div class="contacts-section">
                 <a class="link logo footer" href=""><span>Web</span>Studio</a>
@@ -451,7 +471,7 @@
                     </a>
                     <ul class="contacts list">
                         <li><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li class="contact-list-phone"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
@@ -504,6 +524,7 @@
             </div>
         </div>
     </footer>
+    <!-- modal -->
     <div data-backdrop class="backdrop is-hidden">
         <div class="hide-modal">
             <div class="modal">
@@ -553,7 +574,7 @@
             </div>
         </div>
     </div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <!-- js connect -->
+    <script src="./js/js"></script>
 </body>
 </html>

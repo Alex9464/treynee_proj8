@@ -1,3 +1,16 @@
+.section_presentation {
+    margin-left: auto;
+}
+
+.container.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
 .presentation-title,
 .team {
     font-weight: 700;
@@ -7,6 +20,11 @@
     color: var(--title-text-color);
     margin-bottom: 50px;
     text-align: center;
+}
+
+.presentation-list {
+    gap: 30px;
+    display: flex;
 }
 
 .presentation-thumb {
